@@ -1,430 +1,261 @@
 <!DOCTYPE html>
-<html lang="ru" data-theme="light">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Вскрытие замков, сейфов и авто в Бишкеке. Работаем 24/7 — быстро и без повреждений."
-    />
-    <title>Вскрытие замков Бишкек — LOCK MASTER</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      :root,
-      [data-theme="light"] {
-        color-scheme: light;
-        --text: #0f172a;
-        --muted: #64748b;
-        --accent: #0b7cbe;
-        --accent-soft: rgba(11, 124, 190, 0.12);
-        --border: rgba(15, 23, 42, 0.1);
-        --surface: rgba(255, 255, 255, 0.78);
-        --surface-solid: #ffffff;
-        --veil: rgba(248, 250, 252, 0.62);
-        --cta-from: rgba(255, 255, 255, 0.92);
-        --cta-to: #e8f0f7;
-        --btn-primary-fg: #041018;
-        --toggle-bg: rgba(255, 255, 255, 0.85);
-        --toggle-border: rgba(15, 23, 42, 0.12);
-        --toggle-icon: #334155;
-      }
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#111827">
 
-      [data-theme="dark"] {
-        color-scheme: dark;
-        --text: #e8ecf4;
-        --muted: #9aa4b8;
-        --accent: #2d9cdb;
-        --accent-soft: rgba(45, 156, 219, 0.18);
-        --border: rgba(255, 255, 255, 0.1);
-        --surface: rgba(21, 28, 46, 0.82);
-        --surface-solid: #151c2e;
-        --veil: rgba(10, 15, 28, 0.72);
-        --cta-from: #151c2e;
-        --cta-to: #1a2438;
-        --btn-primary-fg: #041018;
-        --toggle-bg: rgba(21, 28, 46, 0.9);
-        --toggle-border: rgba(255, 255, 255, 0.12);
-        --toggle-icon: #cbd5e1;
-      }
+<title>Вскрытие замков в Бишкеке 24/7 | Lock Master</title>
+<meta name="description" content="Lock Master — вскрытие замков, дверей, автомобилей и сейфов в Бишкеке 24/7. Выезд мастера, ремонт и замена замков. Телефон: 0707 797 677.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://lockmaster.kg/">
 
-      * {
-        box-sizing: border-box;
-      }
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Lock Master">
+<meta property="og:title" content="Lock Master — вскрытие замков в Бишкеке 24/7">
+<meta property="og:description" content="Вскрытие дверей, автомобилей и сейфов в Бишкеке. Выезд мастера 24/7.">
+<meta property="og:url" content="https://lockmaster.kg/">
+<meta property="og:locale" content="ru_RU">
 
-      .ambient {
-        position: fixed;
-        inset: 0;
-        z-index: 0;
-        pointer-events: none;
-        overflow: hidden;
-      }
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Locksmith",
+  "name":"Lock Master",
+  "url":"https://lockmaster.kg/",
+  "telephone":"+996707797677",
+  "description":"Вскрытие замков, дверей, автомобилей и сейфов в Бишкеке 24/7.",
+  "areaServed":{"@type":"City","name":"Бишкек"},
+  "openingHours":"Mo-Su 00:00-23:59",
+  "contactPoint":{
+    "@type":"ContactPoint",
+    "telephone":"+996707797677",
+    "contactType":"customer service",
+    "availableLanguage":["Russian","Kyrgyz"]
+  }
+}
+</script>
 
-      .ambient__img {
-        position: absolute;
-        inset: -12%;
-        width: 124%;
-        height: 124%;
-        object-fit: cover;
-        object-position: center;
-        filter: blur(40px) saturate(1.08);
-        transform: scale(1.05);
-      }
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;color:#111827;background:#f5f6f8;line-height:1.6}
+a{text-decoration:none;color:inherit}
+.container{width:92%;max-width:1150px;margin:auto}
+header{position:sticky;top:0;z-index:1000;background:#111827;color:#fff;box-shadow:0 3px 15px #0002}
+.header-inner{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-size:24px;font-weight:900;letter-spacing:1px}
+.logo span{color:#f59e0b}
+.menu{display:flex;gap:25px;font-size:15px}
+.menu a:hover{color:#f59e0b}
+.header-phone{font-weight:bold;color:#f59e0b;white-space:nowrap}
 
-      .ambient__veil {
-        position: absolute;
-        inset: 0;
-        background: var(--veil);
-        transition: background 0.25s ease;
-      }
+.hero{background:linear-gradient(135deg,#111827,#1f2937 65%,#374151);color:#fff;padding:90px 0 80px}
+.hero-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:50px;align-items:center}
+.badge{display:inline-block;padding:8px 14px;border-radius:30px;background:#f59e0b26;border:1px solid #f59e0b80;color:#fbbf24;font-weight:bold;margin-bottom:20px}
+h1{font-size:clamp(38px,6vw,64px);line-height:1.05;margin-bottom:22px}
+.hero-text{font-size:20px;color:#e5e7eb;max-width:720px}
+.buttons{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:15px 22px;border-radius:10px;font-weight:800;transition:.2s}
+.btn-yellow{background:#f59e0b;color:#111827}.btn-yellow:hover{background:#fbbf24;transform:translateY(-2px)}
+.btn-outline{border:2px solid #fff;color:#fff}.btn-outline:hover{background:#fff;color:#111827}
+.hero-card{background:#fff;color:#111827;padding:30px;border-radius:18px;box-shadow:0 20px 50px #0004}
+.hero-card h2{font-size:25px;margin-bottom:15px}
+.hero-list{list-style:none;margin-bottom:20px}.hero-list li{padding:9px 0;border-bottom:1px solid #e5e7eb}.hero-list li:last-child{border:0}
+.big-phone{font-size:28px;font-weight:900}
 
-      body {
-        margin: 0;
-        font-family: "Manrope", system-ui, sans-serif;
-        color: var(--text);
-        line-height: 1.6;
-        min-height: 100vh;
-        isolation: isolate;
-        transition: color 0.2s ease;
-      }
+section{padding:75px 0}
+.section-title{max-width:760px;margin:0 auto 40px;text-align:center}
+.section-title h2{font-size:38px;line-height:1.2;margin-bottom:12px}
+.section-title p{color:#667085;font-size:17px}
 
-      .theme-toggle {
-        position: fixed;
-        top: 1rem;
-        right: 1rem;
-        z-index: 20;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 2.75rem;
-        height: 2.75rem;
-        padding: 0;
-        border: 1px solid var(--toggle-border);
-        border-radius: 12px;
-        background: var(--toggle-bg);
-        color: var(--toggle-icon);
-        cursor: pointer;
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease,
-          transform 0.15s ease;
-      }
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.service{background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:28px;box-shadow:0 5px 20px #0000000d;transition:.2s}
+.service:hover{transform:translateY(-4px);box-shadow:0 10px 25px #00000014}
+.service-icon{font-size:35px;margin-bottom:10px}.service h3{font-size:21px;margin-bottom:10px}.service p{color:#667085}
 
-      .theme-toggle:hover {
-        transform: scale(1.04);
-      }
+.dark{background:#111827;color:#fff}
+.dark .section-title p{color:#d1d5db}
+.advantages{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.advantage{border:1px solid #374151;border-radius:14px;padding:24px}
+.advantage strong{display:block;font-size:20px;margin-bottom:5px}.advantage span{color:#d1d5db;font-size:14px}
 
-      .theme-toggle:focus-visible {
-        outline: 2px solid var(--accent);
-        outline-offset: 2px;
-      }
+.two-columns{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:start}
+.content h2{font-size:38px;margin-bottom:20px;line-height:1.2}.content p{margin-bottom:17px;color:#4b5563}
+.check-box{background:#fff;border-radius:16px;padding:30px;border:1px solid #e5e7eb}
+.check-box h3{font-size:23px;margin-bottom:15px}.check-list{list-style:none}.check-list li{position:relative;padding:9px 0 9px 30px}
+.check-list li:before{content:"✓";position:absolute;left:0;color:#16a34a;font-weight:bold;font-size:20px}
 
-      .theme-toggle svg {
-        width: 1.25rem;
-        height: 1.25rem;
-      }
+.faq{max-width:850px;margin:auto}
+details{background:#fff;border:1px solid #e5e7eb;border-radius:12px;margin-bottom:12px;padding:18px 20px}
+summary{cursor:pointer;font-weight:bold;font-size:17px}details p{color:#667085;margin-top:12px}
 
-      .icon-moon {
-        display: none;
-      }
+.cta{background:#f59e0b;border-radius:20px;padding:50px 30px;text-align:center}
+.cta h2{font-size:38px;line-height:1.2;margin-bottom:12px}.cta p{margin-bottom:20px}
+.cta-buttons{display:flex;justify-content:center;flex-wrap:wrap;gap:12px}
+.cta-btn{display:inline-flex;justify-content:center;align-items:center;padding:15px 25px;border-radius:10px;background:#111827;color:#fff;font-weight:bold}.whatsapp{background:#16a34a}
 
-      [data-theme="dark"] .icon-sun {
-        display: none;
-      }
+footer{background:#0b1220;color:#d1d5db;padding:40px 0 90px}
+.footer-inner{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}.footer-title{color:#fff;font-size:20px;font-weight:bold}
+.copyright{margin-top:30px;color:#9ca3af;font-size:13px}
+.mobile-bar{display:none}
 
-      [data-theme="dark"] .icon-moon {
-        display: block;
-      }
+@media(max-width:900px){
+.menu{display:none}.hero-grid{grid-template-columns:1fr}.services{grid-template-columns:1fr 1fr}
+.advantages{grid-template-columns:1fr 1fr}.two-columns{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+body{padding-bottom:70px}.header-phone{display:none}.hero{padding:60px 0}
+h1{font-size:42px}.hero-text{font-size:17px}.buttons .btn{width:100%}
+.services,.advantages{grid-template-columns:1fr}
+.section-title h2,.content h2{font-size:31px}.cta h2{font-size:29px}.cta-buttons a{width:100%}
+.mobile-bar{display:flex;position:fixed;bottom:0;left:0;right:0;background:#111827;padding:9px;gap:8px;z-index:2000}
+.mobile-bar a{flex:1;text-align:center;padding:12px 5px;border-radius:8px;font-weight:900}
+.mobile-call{background:#f59e0b;color:#111827}.mobile-whatsapp{background:#16a34a;color:#fff}
+}
+</style>
+</head>
 
-      .wrap {
-        position: relative;
-        z-index: 1;
-        max-width: 720px;
-        margin: 0 auto;
-        padding: 2rem 1.25rem 4rem;
-        padding-top: 3.5rem;
-      }
+<body>
+<header>
+<div class="container header-inner">
+<a href="/" class="logo">LOCK <span>MASTER</span></a>
+<nav class="menu" aria-label="Основная навигация">
+<a href="#services">Услуги</a>
+<a href="#about">О нас</a>
+<a href="#faq">Вопросы</a>
+<a href="#contacts">Контакты</a>
+</nav>
+<a class="header-phone" href="tel:+996707797677">0707 797 677</a>
+</div>
+</header>
 
-      header {
-        text-align: center;
-        padding: 2rem 0 1.5rem;
-      }
+<main>
+<section class="hero">
+<div class="container hero-grid">
+<div>
+<span class="badge">БИШКЕК • 24/7 • ВЫЕЗД МАСТЕРА</span>
+<h1>Вскрытие замков в Бишкеке 24/7</h1>
+<p class="hero-text">Профессиональное вскрытие дверей, автомобилей и сейфов. Если вы потеряли ключи, захлопнули дверь или столкнулись с неисправностью замка — свяжитесь с Lock Master.</p>
+<div class="buttons">
+<a class="btn btn-yellow" href="tel:+996707797677">Позвонить: 0707 797 677</a>
+<a class="btn btn-outline" href="https://wa.me/996707797677" target="_blank" rel="noopener">Написать в WhatsApp</a>
+</div>
+</div>
+<div class="hero-card">
+<h2>Нужен мастер сейчас?</h2>
+<ul class="hero-list">
+<li>🔐 Вскрытие дверных замков</li>
+<li>🚗 Вскрытие автомобилей</li>
+<li>🧰 Вскрытие сейфов</li>
+<li>🔧 Ремонт и замена замков</li>
+<li>⏰ Приём заявок 24/7</li>
+</ul>
+<a class="big-phone" href="tel:+996707797677">0707 797 677</a>
+</div>
+</div>
+</section>
 
-      .badge {
-        display: inline-block;
-        font-size: 0.75rem;
-        font-weight: 600;
-        letter-spacing: 0.06em;
-        text-transform: uppercase;
-        color: var(--accent);
-        background: var(--accent-soft);
-        padding: 0.35rem 0.75rem;
-        border-radius: 999px;
-        margin-bottom: 1rem;
-      }
+<section id="services">
+<div class="container">
+<div class="section-title">
+<h2>Услуги Lock Master в Бишкеке</h2>
+<p>Помощь с замками, дверями, автомобилями и сейфами с выездом по Бишкеку.</p>
+</div>
+<div class="services">
+<article class="service"><div class="service-icon">🔐</div><h3>Вскрытие дверей и замков</h3><p>Помощь при потере ключей, захлопывании двери, поломке или заклинивании замка. При необходимости выполняем ремонт или замену.</p></article>
+<article class="service"><div class="service-icon">🚗</div><h3>Вскрытие автомобилей</h3><p>Помощь, если ключи остались внутри автомобиля, потеряны или возникла проблема с автомобильным замком.</p></article>
+<article class="service"><div class="service-icon">🧰</div><h3>Вскрытие сейфов</h3><p>Вскрытие сейфов при утере ключа или неисправности замка с подбором подходящего способа работы.</p></article>
+<article class="service"><div class="service-icon">🔧</div><h3>Замена замков</h3><p>Замена неисправных или повреждённых замков. Поможем подобрать подходящий вариант для двери.</p></article>
+<article class="service"><div class="service-icon">🛠️</div><h3>Ремонт замков</h3><p>Помощь при неисправности механизма замка. Возможность ремонта или замены зависит от состояния замка.</p></article>
+<article class="service"><div class="service-icon">⏰</div><h3>Вызов мастера 24/7</h3><p>Принимаем заявки круглосуточно. Позвоните или напишите в WhatsApp и сообщите, какая помощь вам нужна.</p></article>
+</div>
+</div>
+</section>
 
-      h1 {
-        font-size: clamp(1.75rem, 5vw, 2.25rem);
-        font-weight: 700;
-        line-height: 1.2;
-        margin: 0 0 0.75rem;
-      }
+<section class="dark">
+<div class="container">
+<div class="section-title"><h2>Почему выбирают Lock Master</h2><p>Выездной сервис для срочных ситуаций с замками в Бишкеке.</p></div>
+<div class="advantages">
+<div class="advantage"><strong>24/7</strong><span>Принимаем заявки круглосуточно.</span></div>
+<div class="advantage"><strong>Бишкек</strong><span>Работаем с выездом по городу.</span></div>
+<div class="advantage"><strong>Авто • Двери • Сейфы</strong><span>Несколько услуг в одном сервисе.</span></div>
+<div class="advantage"><strong>WhatsApp</strong><span>Можно быстро связаться с мастером.</span></div>
+</div>
+</div>
+</section>
 
-      .lead {
-        color: var(--muted);
-        font-size: 1.05rem;
-        max-width: 32em;
-        margin: 0 auto;
-      }
+<section id="about">
+<div class="container two-columns">
+<div class="content">
+<h2>Вскрытие замков в Бишкеке</h2>
+<p>Если вам необходимо <strong>вскрытие замка в Бишкеке</strong>, обратитесь в Lock Master. Мастер уточнит ситуацию и подберёт подходящий способ работы.</p>
+<p>Мы оказываем услуги по <strong>вскрытию дверей, замков, автомобилей и сейфов</strong>, а также выполняем <strong>ремонт и замену замков</strong> при необходимости.</p>
+<p>Если проблема возникла срочно, позвоните по номеру <a href="tel:+996707797677"><strong>0707 797 677</strong></a> или напишите в WhatsApp.</p>
+<p>Lock Master работает с выездом по Бишкеку. Заявки принимаются круглосуточно, в том числе ночью, в выходные и праздничные дни.</p>
+</div>
+<div class="check-box">
+<h3>Когда вызывают мастера?</h3>
+<ul class="check-list">
+<li>Потеряли ключи от квартиры или дома</li>
+<li>Дверь захлопнулась, а ключ остался внутри</li>
+<li>Ключ сломался или замок заклинило</li>
+<li>Ключи остались внутри автомобиля</li>
+<li>Потерян ключ от сейфа</li>
+<li>Нужно заменить неисправный замок</li>
+<li>Нужна срочная помощь ночью</li>
+</ul>
+</div>
+</div>
+</section>
 
-      section {
-        margin-top: 2.5rem;
-      }
+<section id="faq">
+<div class="container">
+<div class="section-title"><h2>Частые вопросы</h2><p>Ответы на основные вопросы перед вызовом мастера.</p></div>
+<div class="faq">
+<details><summary>Вы работаете круглосуточно?</summary><p>Да. Lock Master принимает заявки 24/7.</p></details>
+<details><summary>Выезжаете по Бишкеку?</summary><p>Да, выполняем выездные заявки по Бишкеку.</p></details>
+<details><summary>Можно ли открыть дверь без ключа?</summary><p>В зависимости от конструкции двери и замка мастер подбирает подходящий способ открытия.</p></details>
+<details><summary>Вы вскрываете автомобили?</summary><p>Да, оказываем услуги по вскрытию автомобилей.</p></details>
+<details><summary>Вы вскрываете сейфы?</summary><p>Да, выполняем вскрытие сейфов при утере ключа или неисправности замка.</p></details>
+<details><summary>Можно ли заменить замок после вскрытия?</summary><p>Да. При необходимости мастер может выполнить ремонт или замену замка.</p></details>
+<details><summary>Как вызвать мастера?</summary><p>Позвоните по номеру <strong>0707 797 677</strong> или напишите в WhatsApp. Сообщите адрес и опишите проблему.</p></details>
+</div>
+</div>
+</section>
 
-      h2 {
-        font-size: 1rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-        color: var(--muted);
-        margin: 0 0 1rem;
-      }
+<section id="contacts">
+<div class="container">
+<div class="cta">
+<h2>Нужна помощь с замком прямо сейчас?</h2>
+<p>Позвоните в Lock Master или напишите в WhatsApp. Работаем 24/7 по Бишкеку.</p>
+<div class="cta-buttons">
+<a class="cta-btn" href="tel:+996707797677">📞 0707 797 677</a>
+<a class="cta-btn whatsapp" href="https://wa.me/996707797677" target="_blank" rel="noopener">WhatsApp</a>
+</div>
+</div>
+</div>
+</section>
+</main>
 
-      .cards {
-        display: grid;
-        gap: 0.75rem;
-      }
+<footer>
+<div class="container">
+<div class="footer-inner">
+<div><div class="footer-title">LOCK MASTER</div><p>Вскрытие замков, дверей, автомобилей и сейфов в Бишкеке.</p></div>
+<div>
+<p>📞 <a href="tel:+996707797677">0707 797 677</a></p>
+<p>⏰ Работаем 24/7</p>
+<p>📍 Бишкек, Кыргызстан</p>
+</div>
+</div>
+<div class="copyright">© 2026 Lock Master. Все права защищены.</div>
+</div>
+</footer>
 
-      .card {
-        background: var(--surface);
-        border: 1px solid var(--border);
-        border-radius: 12px;
-        padding: 1rem 1.1rem;
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-        transition: background 0.2s ease, border-color 0.2s ease;
-      }
-
-      .card strong {
-        display: block;
-        font-size: 1rem;
-        margin-bottom: 0.25rem;
-      }
-
-      .card span {
-        font-size: 0.9rem;
-        color: var(--muted);
-      }
-
-      ul.points {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-
-      ul.points li {
-        position: relative;
-        padding-left: 1.5rem;
-        margin-bottom: 0.65rem;
-        color: var(--muted);
-        font-size: 0.95rem;
-      }
-
-      ul.points li::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0.55em;
-        width: 6px;
-        height: 6px;
-        border-radius: 50%;
-        background: var(--accent);
-      }
-
-      .cta {
-        margin-top: 2.5rem;
-        text-align: center;
-        padding: 2rem 1.25rem;
-        background: linear-gradient(145deg, var(--cta-from), var(--cta-to));
-        border: 1px solid var(--border);
-        border-radius: 16px;
-        transition: background 0.2s ease, border-color 0.2s ease;
-      }
-
-      .cta p {
-        margin: 0 0 1.25rem;
-        color: var(--muted);
-        font-size: 0.95rem;
-      }
-
-      .buttons {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.75rem;
-        justify-content: center;
-      }
-
-      a.btn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        gap: 0.5rem;
-        padding: 0.85rem 1.35rem;
-        border-radius: 10px;
-        font-weight: 600;
-        font-size: 0.95rem;
-        text-decoration: none;
-        transition: transform 0.15s ease, opacity 0.15s ease;
-      }
-
-      a.btn:hover {
-        transform: translateY(-1px);
-      }
-
-      a.btn-primary {
-        background: var(--accent);
-        color: var(--btn-primary-fg);
-      }
-
-      a.btn-ghost {
-        background: var(--surface-solid);
-        color: var(--text);
-        border: 1px solid var(--border);
-      }
-
-      [data-theme="dark"] a.btn-ghost {
-        background: transparent;
-      }
-
-      footer {
-        margin-top: 3rem;
-        text-align: center;
-        font-size: 0.8rem;
-        color: var(--muted);
-      }
-    </style>
-  </head>
-  <body>
-    <div class="ambient" aria-hidden="true">
-      <img
-        class="ambient__img"
-        src="background.jpg"
-        alt=""
-        width="1920"
-        height="1280"
-        decoding="async"
-        fetchpriority="low"
-      />
-      <div class="ambient__veil"></div>
-    </div>
-
-    <button
-      type="button"
-      class="theme-toggle"
-      id="theme-toggle"
-      aria-label="Включить тёмную тему"
-      title="Тёмная тема"
-    >
-      <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-        <circle cx="12" cy="12" r="4" />
-        <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" stroke-linecap="round" />
-      </svg>
-      <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke-linecap="round" stroke-linejoin="round" />
-      </svg>
-    </button>
-
-    <div class="wrap">
-      <header>
-        <span class="badge">LOCK MASTER · Бишкек 24/7</span>
-        <h1>Профессиональное вскрытие замков, сейфов и авто</h1>
-        <p class="lead">
-          Работаем по Бишкеку круглосуточно. Быстро, аккуратно и без повреждений.
-        </p>
-      </header>
-
-      <section aria-labelledby="services-heading">
-        <h2 id="services-heading">Наши услуги</h2>
-        <div class="cards">
-          <div class="card">
-            <strong>Вскрытие дверей</strong>
-            <span>Открываем квартиры, дома и офисы без повреждений.</span>
-          </div>
-          <div class="card">
-            <strong>Вскрытие авто</strong>
-            <span>Помощь при потере ключей или блокировке машины.</span>
-          </div>
-          <div class="card">
-            <strong>Вскрытие сейфов</strong>
-            <span>Работаем с различными типами сейфов и замков.</span>
-          </div>
-        </div>
-      </section>
-
-      <section aria-labelledby="why-heading">
-        <h2 id="why-heading">Почему выбирают нас</h2>
-        <ul class="points">
-          <li>Выезд по Бишкеку 24/7</li>
-          <li>Быстрое прибытие</li>
-          <li>Опыт и профессиональный инструмент</li>
-          <li>Конфиденциальность и аккуратность</li>
-        </ul>
-      </section>
-
-      <div class="cta">
-        <p>Связаться с нами — позвоните или напишите в WhatsApp.</p>
-        <div class="buttons">
-          <a class="btn btn-primary" href="tel:+996707797677">0707 797 677</a>
-          <a
-            class="btn btn-ghost"
-            href="https://wa.me/996707797677"
-            target="_blank"
-            rel="noopener noreferrer"
-            >WhatsApp</a
-          >
-        </div>
-      </div>
-
-      <footer>
-        <p>© 2026 LOCK MASTER · Бишкек</p>
-      </footer>
-    </div>
-
-    <script>
-      (function () {
-        var storageKey = "plumberkg-theme";
-        var root = document.documentElement;
-        var btn = document.getElementById("theme-toggle");
-
-        function setTheme(theme) {
-          root.setAttribute("data-theme", theme);
-          try {
-            localStorage.setItem(storageKey, theme);
-          } catch (e) {}
-          var dark = theme === "dark";
-          btn.setAttribute("aria-label", dark ? "Включить светлую тему" : "Включить тёмную тему");
-          btn.setAttribute("title", dark ? "Светлая тема" : "Тёмная тема");
-        }
-
-        var stored = null;
-        try {
-          stored = localStorage.getItem(storageKey);
-        } catch (e) {}
-        if (stored === "dark" || stored === "light") {
-          setTheme(stored);
-        } else {
-          setTheme("light");
-        }
-
-        btn.addEventListener("click", function () {
-          var next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
-          setTheme(next);
-        });
-      })();
-    </script>
-  </body>
+<div class="mobile-bar">
+<a class="mobile-call" href="tel:+996707797677">📞 Позвонить</a>
+<a class="mobile-whatsapp" href="https://wa.me/996707797677" target="_blank" rel="noopener">WhatsApp</a>
+</div>
+</body>
 </html>
+
